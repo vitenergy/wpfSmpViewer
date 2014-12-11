@@ -1,0 +1,57 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="WpfDataBinding.smpQueryWindow"
+        Title="smpQueryWindow" Height="513" Width="399">
+    <Grid>
+
+        <dxlc:LayoutControl Header="Header" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200">
+                    <dxlc:LayoutItem IsRequired="True" Label="From Date:" LabelPosition="Top" HorizontalAlignment="Center">
+                        <dxe:TextEdit x:Name="tbFromDate" MinWidth="200" EditValue="2011-1-1"/>
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem IsRequired="True" Label="End Date:" LabelPosition="Top" HorizontalAlignment="Center">
+                        <dxe:TextEdit x:Name="tbEndDate" MinWidth="200" EditValue="2011-1-1"/>
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutGroup>
+                <!--
+                <dxlc:LayoutItem HorizontalAlignment="Right" VerticalAlignment="Top" VerticalContentAlignment="Center">
+                    <dxe:ImageEdit IsReadOnly="True" Width="150"/>
+                </dxlc:LayoutItem>
+                -->
+            </dxlc:LayoutGroup>
+            <dxlc:LayoutGroup Header="Aggregate Method" Orientation="Vertical" HorizontalAlignment="Center" Width="200" UseLayoutRounding="True" View="GroupBox">
+                <RadioButton x:Name="rdbAvg" Content="Average  " HorizontalAlignment="Center"/>
+                <RadioButton x:Name="rdbMax" Content="Maximum" HorizontalAlignment="Center"/>
+                <RadioButton x:Name="rdbMin" Content="Miniimum" HorizontalAlignment="Center"/>
+                <RadioButton x:Name="rdbhrly" Content="Hourly    " HorizontalAlignment="Center" IsChecked="True"/>
+                <!--<dxlc:LayoutItem Label="Mobile">
+                    <dxe:TextEdit EditValue="9999999999" MaskType="Simple" Mask="(999) 000-0000"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Home">
+                    <dxe:TextEdit EditValue="9999999999" MaskType="Simple" Mask="(999) 000-0000"/>
+                </dxlc:LayoutItem>-->
+            </dxlc:LayoutGroup>
+            <dxlc:LayoutGroup Header="Region Selection" Orientation="Vertical" HorizontalAlignment="Center" Width="200" UseLayoutRounding="True" View="GroupBox">
+                <CheckBox x:Name="cbInternal" Content="  내륙     " HorizontalAlignment="Center" IsChecked="True"/>
+                <CheckBox x:Name="cbIsle" Content="  제주     " HorizontalAlignment="Center" IsChecked="True"/>
+                <!--<dxlc:LayoutItem Label="E-Mail">
+                    <dxe:TextEdit EditValue="support@devexpress.com" MaskType="RegEx" Mask="[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="E-Mail 2">
+                    <dxe:TextEdit MaskType="RegEx" Mask="[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}"/>
+                </dxlc:LayoutItem>-->
+            </dxlc:LayoutGroup>
+            <dxlc:LayoutItem>
+            </dxlc:LayoutItem>
+            <dxlc:LayoutControl Width="200">
+                <dxlc:LayoutItem>
+                    <Button x:Name="btnQuery" Width="80" Height="40" Content="RUN" Click="btnQuery_Click"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutControl>
+        </dxlc:LayoutControl>
+
+    </Grid>
+
+</Window>
